@@ -6,7 +6,7 @@
 @stop
 
 @section('content')
-    <p>Bienvenido puto, aca tenes tus posts BASURA.</p>
+    <p>Bienvenido la concha de tu hermana.</p>
 @stop
 
 @section('css')

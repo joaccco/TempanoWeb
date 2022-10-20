@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ChatsController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,13 @@ Route::get('/productos', function (){
     return view('productos.index', [
     ]);
 });
+
+Route::get('/galery', function (){
+    return view('galery.index', [
+    ]);
+});
+
+
 //Directo desde el controlador POSTCONTROLLER 
 /* Route::get('/posts', function (){
     return view('posts.index', [
@@ -48,8 +57,6 @@ Route::get('/messages', [App\Http\Controllers\ChatsController::class, 'fetchMess
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-
-
 //Posts Vistas-User
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show'); /* Vista de Cada Post */
@@ -60,6 +67,10 @@ Route::get('category/{category}', /* Sera admin por-> */ [PostController::class,
 Route::get('/productos', [ProductController::class, 'index'])->name('productos.index');
 
 Route::get('productos/{product}', [ProductController::class, 'show'])->name('productos.show'); /* Vista de Cada Post */
+
+//Forms
+Route::get('/client', [ClientController::class, 'index'])->name('client.index');
+Route::get('/event', [EventController::class, 'index'])->name('event.index');
 
 Route::middleware([
     'auth:sanctum',

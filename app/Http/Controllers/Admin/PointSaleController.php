@@ -120,7 +120,7 @@ class PointSaleController extends Controller
     public function destroy(Pointsale $pointsale)
     {
         $pointsale->delete();
-        return redirect()->route('admin.pointsales.index', $pointsale)->with('info', 'El Producto se Elimino con exito');
+        return redirect()->route('admin.pointsales.index', $pointsale)->with('info', 'El Punto se Elimino con exito');
     }
 
     public function fridge(Fridge $fridge){

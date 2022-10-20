@@ -11,6 +11,13 @@
         <div class="card-header">
             <a class="btn btn-primary" href="{{route('admin.categories.create')}}">Agregar Categorias</a>
         </div>
+        @if (session('info'))
+        <div class="alert alert-success">
+            <strong>
+                {{session('info')}}
+            </strong>
+        </div>
+    @endif
         <div class="card-body">
             <p>Bienvenido la concha de tu hermana.</p>
             <table class="table table-striped">
@@ -30,13 +37,13 @@
                         <td>{{$category->name}}</td>
                         <td>{{$category->description}}</td>
                         <td width="10px">
-                            <a  class="btn btn-primary btn-sm" href="{{route('admin.categories.edit', $category)}}">Editar</a></td>
+                            <a  class="text-white rounded-lg btn bg-sky-600" href="{{route('admin.categories.edit', $category)}}">Editar</a></td>
                         <td width="10px">
                             <form action="{{route('admin.categories.destroy', $category)}}" method="POST">
                                 @csrf
                                 @method('delete')
 
-                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                <button type="submit" onclick="return confirm('¿Quiere Eliminar el Producto?')" class="text-white rounded-lg btn bg-red-600">Eliminar</button>
                             </form>
                         </td>
                      </tr>
@@ -47,14 +54,6 @@
             </table>
         </div>
     </div>
-
-    @if (session('info'))
-        <div class="alert alert-success">
-            <strong>
-                {{session('info')}}
-            </strong>
-        </div>
-    @endif
 @stop
 
 

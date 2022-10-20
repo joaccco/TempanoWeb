@@ -1,34 +1,20 @@
 @extends('layouts.app')
 @section('content')
-<head>
-  {{-- Map --}}
-  <link rel="stylesheet" href="/path/to/leaflet.css" />
-  <script src="node_modules/leaflet/dist/leaflet.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
-
-  {{-- CSS Map --}}
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-  integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-  crossorigin=""/>
-  <!-- Make sure you put this AFTER Leaflet's CSS -->
-  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-  integrity="sha256-o9N1jGDZrf5tS       +Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
-  crossorigin=""></script>
-</head>
-<body>
+  <div>
+    <h1 class="justify-center font-extrabold bg-gradient-to-t text-black">Puntos de venta</h1>
   
-  <h1 class="h-18 ml-5 px-12 rounded-md bg-gradient-to-t text-black">Hielos TEMPANO</h1>
-  <h1 class="h-18 ml-5 px-5 font-extrabold rounded-md bg-gradient-to-t text-black">Puntos de venta</h1>
     <div id="map">
       <style>
         #map { 
             width: 100%;
-            height: 680px;
+            height: 550px;
+            z-index: -1000;
             box-shadow: 5px 5px 5px rgb(46, 16, 16);
+           
+
          }
       </style>
-      <script class="h-full w-full object-cover object-center">
+      <script class="">
           //Cree el mapa 
           var map = L.map('map').
              setView([41.66, -4.72],15);
@@ -87,4 +73,5 @@
       </script>
      </div>
 </body>
+  </div>
 @endsection

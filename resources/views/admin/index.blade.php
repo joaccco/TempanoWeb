@@ -8,8 +8,7 @@
 
 @section('content')
     <p>Bienvenido.</p>
-
-   
+    
 @stop
 
 @section('css')

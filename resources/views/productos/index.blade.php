@@ -8,7 +8,7 @@
            @foreach ($products as $product)
             <div class="group relative">
               <div class="relative h-80 w-full overflow-hidden rounded-lg bg-whitegroup-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1lg:aspect-h-1">
-                <img src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg" alt="Desk with leather desk pad, walnutdesk organizer, wireless keyboard and mouse, and porcelain mug."class="h-full w-full object-cover object-center">
+                <img src="{{$product->image}}" alt="Desk with leather desk pad, walnutdesk organizer, wireless keyboard and mouse, and porcelain mug."class="h-full w-full object-cover object-center">
               </div>
               <h3 class="mt-6 text-sm text-gray-500">
                 <a href="#">
@@ -18,7 +18,9 @@
               </h3>
               <a class="text-base font-semibold text-gray-900" href="{{route('productos.show', $product)}}">{{$product->name}}</a>
               <p class="text-gray-500">{{$product->detail}}</p>
-              <p class="text-gray-300">{{$product->price}}</p>
+              <strong class="rounded-full border bg-blue-600 border-current px-5 py-1.5 text-[10px text-white">
+            {{$product->price}}
+            </strong>
             </div>
           @endforeach
         </div>

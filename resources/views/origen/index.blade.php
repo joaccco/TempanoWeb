@@ -11,19 +11,18 @@
             <dt class="font-medium text-gray-900">Productos</dt>
             <dd class="mt-2 mb-2 text-sm text-gray-500">Vendemos el <b>Hielo Rolito</b> en bolsa nuestro inventario de productos alberga 3 tamaños de bolsas <b>2kg - 5kg - 10kg</b>. Siendo la de 5kg la ultima en lanzarse. </dd>
             <a class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg" href="/productos">
-              Ver Productos
+              Nuestros Productos
             </a>
           </div>
   
           <div class="border-t border-gray-200 pt-4">
             <dt class="font-medium text-gray-900">Produccion</dt>
-            <dd class="mt-2 mb-2 text-sm text-gray-500">Utilizamos agua potable de red para la   elaboracion del HIelo Rolito.
-              Nuestra planta es Ecologica,  utiliza un motor semihermetico respetuoso con el medio ambiente con la tecnologia ECONOLINE, el cual proporciona capacidad frigorifica con un bajo consumo de energia</dd>
-              <a href="/galeria" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">
+            <dd class="mt-2 mb-2 text-sm text-gray-500">Utilizamos agua potable de red para la elaboracion del Hielo Rolito. Nuestra planta es Ecologica,  utiliza un motor semihermetico respetuoso con el medio ambiente con la tecnologia ECONOLINE, el cual proporciona capacidad frigorifica con un bajo consumo de energia</dd>
+              <a href="/galery" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">
                 Galeria de Imagenes
               </a>
           </div>
-  
+
           <div class="border-t border-gray-200 pt-4">
             <dt class="font-medium text-gray-900">Puntos de Venta</dt>
             <dd class="mt-2 mb-2 text-sm text-gray-500">Para ver ubicaciones de nuestro punto de venta debes acceder a la pestaña ubiccada en el NavBar, en la cual esta nuestro mapa con informacion de cada uno de los puntos de venta, horarios de atenciom, promociones, y beneficios no te lo pierdas. </dd>
@@ -35,7 +34,7 @@
           <div class="border-t border-gray-200 pt-4">
             <dt class="font-medium text-gray-900">Tus Eventos</dt>
             <dd class="mt-2 mb-2 text-sm text-gray-500">Estas planeando realizar un evento en Corrientes?, nosotros te podemos ayudar a <b>refrescar</b> las bebidas, solamente nos tenes que contactar. Si necesitas una gran cantidad de Bolsas tenemos una <b>camara movil</b> con equipo de frio y capacidad excelentes</dd>
-            <a href="/nuevoevento" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 my-1 rounded-lg">
+            <a href="/event" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 my-1 rounded-lg">
               Rellenar Formulario
             </a>
           </div>
@@ -43,7 +42,7 @@
           <div class="border-t border-gray-200 pt-4">
             <dt class="font-medium text-gray-900">Queres ser Vendedor?</dt>
             <dd class="mt-2 mb-2 text-sm text-gray-500">Si estas interesado en vender nuestros productos, tenemos heladeras de distintas capacidades, solo debemos analizar cual combina mejor con tu local. Rellena el siguiente formulario y estaremos en contacto</dd>
-            <a href="/nuevocliente" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">
+            <a href="/client" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">
               Rellenar Formulario
             </a>
           </div>

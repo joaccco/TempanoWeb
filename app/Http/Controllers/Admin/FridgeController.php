@@ -46,7 +46,7 @@ class FridgeController extends Controller
 
         $fridge = Fridge::create($request->all());
         
-        return redirect()->route('admin.fridges.edit', $fridge)->with('info', 'La Heladera se almaceno con exito');
+        return redirect()->route('admin.fridges.index', $fridge)->with('info', 'La Heladera se almaceno con exito');
     }
 
     /**
@@ -88,7 +88,7 @@ class FridgeController extends Controller
 
         $fridge->update($request->all());
 
-        return redirect()->route('admin.fridges.edit', $fridge)->with('info', 'La heladera se actualizo con exito');
+        return redirect()->route('admin.fridges.index', $fridge)->with('info', 'La heladera se actualizo con exito');
     }
 
     /**
@@ -100,6 +100,6 @@ class FridgeController extends Controller
     public function destroy(Fridge $fridge)
     {
         $fridge->delete();
-        return redirect()->route('admin.fridges.edit', $fridge)->with('info', 'La heladera se Elimino con exito');
+        return redirect()->route('admin.fridges.index', $fridge)->with('info', 'La heladera se Elimino con exito');
     }
 }

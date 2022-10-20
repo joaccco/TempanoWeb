@@ -11,6 +11,13 @@
         <div class="card-header">
             <a class="btn btn-primary" href="{{route('admin.products.create')}}">Nuevo Producto</a>
         </div>
+        @if (session('info'))
+        <div class="alert alert-success">
+            <strong>
+                {{session('info')}}
+            </strong>
+        </div>
+    @endif
         <div class="card-body">
             <p>Bienvenido.</p>
             <table class="table table-striped">
@@ -34,13 +41,13 @@
                         <td>{{$product->price}}</td>
                         <td>{{$product->detail}}</td>
                         <td width="10px">
-                            <a  class="btn btn-primary btn-sm" href="{{route('admin.products.edit', $product)}}">Editar</a></td>
+                            <a  class="text-white rounded-lg btn bg-blue-600" href="{{route('admin.products.edit', $product)}}">Editar</a></td>
                         <td width="10px">
                             <form action="{{route('admin.products.destroy', $product)}}" method="POST">
                                 @csrf
                                 @method('delete')
 
-                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                <button type="submit" onclick="return confirm('¿Quiere Eliminar el Producto?')" class="text-white rounded-lg btn bg-red-600">Eliminar</button>
                             </form>
                         </td>
                      </tr>
@@ -51,12 +58,4 @@
             </table>
         </div>
     </div>
-
-    @if (session('info'))
-        <div class="alert alert-success">
-            <strong>
-                {{session('info')}}
-            </strong>
-        </div>
-    @endif
 @stop

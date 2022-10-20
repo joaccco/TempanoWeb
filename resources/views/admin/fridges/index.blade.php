@@ -11,6 +11,13 @@
         <div class="card-header">
             <a class="btn btn-primary" href="{{route('admin.fridges.create')}}">Agregar Heladeras</a>
         </div>
+        @if (session('info'))
+        <div class="alert alert-success">
+            <strong>
+                {{session('info')}}
+            </strong>
+        </div>
+    @endif
         <div class="card-body">
             <p>Bienvenido.</p>
             <table class="table table-striped">
@@ -32,14 +39,15 @@
                         <td>{{$fridge->brand}}</td>
                         <td>{{$fridge->capability}}</td>
                         <td width="10px">
-                            <a  class="btn btn-primary btn-sm" href="{{route('admin.fridges.edit', $fridge)}}">Editar</a></td>
+                            <a  class="text-white rounded-lg btn bg-blue-600" href="{{route('admin.fridges.edit', $fridge)}}">Editar</a></td>
                         <td width="10px">
                             <form action="{{route('admin.fridges.destroy', $fridge)}}" method="POST">
-                                @csrf
-                                @method('delete')
-
-                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                                    @csrf
+                                    @method('delete')
+    
+                                    <button type="submit" onclick="return confirm('¿Quiere Eliminar el Producto?')" class="text-white rounded-lg btn bg-red-600">Eliminar</button>
                             </form>
+
                         </td>
                      </tr>
                  @endforeach
@@ -49,12 +57,4 @@
             </table>
         </div>
     </div>
-
-    @if (session('info'))
-        <div class="alert alert-success">
-            <strong>
-                {{session('info')}}
-            </strong>
-        </div>
-    @endif
 @stop

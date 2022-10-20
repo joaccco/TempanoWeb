@@ -305,48 +305,31 @@ return [
         ],
         [
             'text' => 'blog',
-            'route'  => 'admin.home',
+            'route'  => 'admin.index',
             'can'  => 'manage-blog',
         ],
 
         ['header' => 'Inicio'],
         [
-            'text'        => 'Home',
-            'url'         => 'admin',
-            'icon'        => 'fas fa-igloo fa-fw',
+             'text'        => 'Home',
+             'url'         => 'admin.home',
+             'icon'        => 'fas fa-igloo fa-fw',
+         ],
+         [
+             'text'        => 'Remitos',
+             'url'         => '#',
+             'icon'        => 'fas fa-table fa-fw',
+         ],
+         [
+             'text'    => 'Posts',
+             'icon'    => 'fas fa-folder-open',
+             'route' => 'admin.posts.index',
         ],
         [
-            'text'        => 'Remitos',
-            'url'         => '#',
-            'icon'        => 'fas fa-table fa-fw',
+             'text'=> 'Chats',
+             'url' => 'admin.chats.index',
+             'icon'        => 'fas fa-comments fa-fw',
         ],
-        [
-            'text'        => 'Posts',
-            'route'         => 'admin.posts.index',
-            'icon'        => 'fas fa-plus fa-fw',
-        ],
-        'text'    => 'Posts',
-            'icon'    => 'fas fa-plus fa-fw',
-            'submenu' => [
-                [
-                    'text'  => 'Lista de Posts',
-                    'route' => 'admin.posts.index',
-                    'icon'  => 'fas fa-circle-check fa-fw',
-                ],
-                [
-                    'text'  => 'Crear un nuevo Post',
-                    'route' => 'admin.posts.create',
-                    'icon'  => 'fas fa-plus fa-fw',
-                ],
-            ],
-
-        [
-            'text'        => 'Chats',
-            'url'         => 'admin.chats.index',
-            'icon'        => 'fas fa-comments fa-fw',
-        ],
-
-        
         ['header' => 'Administracion'],
         [
             'text'    => 'Fabrica',
@@ -364,20 +347,20 @@ return [
                 ],
                 [
                     'text' => 'Camaras',
-                    'icon'    => '',
+                    'icon'    => 'fas fa-circle-check fa-fw',
                     'route'  => 'admin.cameras.index',
                 ],
                 [
                     'text' => 'Materia Prima',
-                    'icon'    => '',
+                    'icon'    => 'fas fa-circle-check fa-fw',
                      'url'  => '#',
                 ],
                 [
                     'text' => 'Desperdicios',
-                    'icon'    => '',
-                     'url'  => '#',
-                ],
-            ],
+                    'icon'    => 'fas fa-circle-check fa-fw',
+                    'url'  => '#',
+                ]
+            ]
         ],
         [
             'text'    => 'Puntos de Venta',
@@ -386,12 +369,12 @@ return [
                 [
                     'text' => 'Heladeras',
                     'route'  => 'admin.fridges.index',
-                    'icon'    => '',
+                    'icon'    => 'fas fa-circle-check fa-fw',
                 ],
                 [
                     'text' => 'Comercios',
                     'route'  => 'admin.pointsales.index',
-                    'icon'    => '',
+                    'icon'    => 'fas fa-circle-check fa-fw',
                 ],
             ],
         ],

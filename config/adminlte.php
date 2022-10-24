@@ -314,17 +314,24 @@ return [
              'text'        => 'Home',
              'url'         => 'admin.home',
              'icon'        => 'fas fa-igloo fa-fw',
-         ],
-         [
+        ],
+        [
              'text'        => 'Remitos',
              'url'         => '#',
              'icon'        => 'fas fa-table fa-fw',
-         ],
-         [
+        ],
+        ['header' => 'Opciones de Posts'],
+        [
              'text'    => 'Posts',
              'icon'    => 'fas fa-folder-open',
              'route' => 'admin.posts.index',
         ],
+        [
+            'text'    => 'Crear Post',
+            'icon'    => 'fas fa-plus',
+            'route' => 'admin.posts.create',
+        ],
+        ['header' => 'Chats'],
         [
              'text'=> 'Chats',
              'url' => 'admin.chats.index',

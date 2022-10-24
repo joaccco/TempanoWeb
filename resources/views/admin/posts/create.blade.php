@@ -25,7 +25,7 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('category_id', 'Categria') !!}
+                {!! Form::label('category_id', 'Categoria') !!}
             </div>
 
             {!! Form::close() !!}

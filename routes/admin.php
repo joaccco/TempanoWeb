@@ -9,11 +9,11 @@ use App\Http\Controllers\Admin\CameraController;
 use App\Http\Controllers\Admin\PointSaleController;
 use App\Http\Controllers\ChatsController;
 use App\Http\Controllers\Admin\PostController;
-
+use App\Http\Controllers\Admin\UserController;
 // dd(Route::get('admin', [HomeController::class, 'index'])->name('index')); 
 
 Route::resource('admin', AdminController::class)->only('index');
-
+Route::resource('users', UserController::class) ->names('admin.users');
 Route::resource('categories', CategoryController::class)->names('admin.categories');
 Route::resource('fridges', FridgeController::class)->names('admin.fridges');
 Route::resource('products', ProductController::class)->names('admin.products');

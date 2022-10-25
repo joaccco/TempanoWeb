@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-
+use App\Http\Controllers\Controller;
+use Spatie\Permission\Models\Role;
 class UserController extends Controller
 {
    /**
@@ -14,9 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+
         
-        return view('admin.users.index', compact('users'));
+        return view('admin.users.index');
     }
 
     /**
@@ -67,7 +68,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('admin.users.edit', compact('user'));
+        $roles= Role::all();
+        return view('admin.users.edit', compact('user','roles'));
     }
 
     /**

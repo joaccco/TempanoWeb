@@ -308,6 +308,11 @@ return [
             'route'  => 'admin.index',
             'can'  => 'manage-blog',
         ],
+        [
+            'text' => 'Usuarios',
+            'route'  => 'admin.users.index',
+            'icon'  => 'fas fa-users fa-fw',
+        ],
 
         ['header' => 'Inicio'],
         [

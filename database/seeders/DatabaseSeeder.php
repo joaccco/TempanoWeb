@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TagSeeder::class);
         $this->call(TicketSeeder::class);
         $this->call(WasteSeeder::class);
+        $this->call(RoleSeeder::class);
 
         $this->call(UserSeeder::class);
         Category::factory(5)->create();

@@ -88,9 +88,15 @@ class UserController extends Controller
         ]);
 
         $user->update($request->all());
-
         return redirect()->route('admin.fridges.edit', $user)->with('info', 'La heladera se actualizo con exito');
+
+        { $user->roles()->sync($request->roles);
+            return redirect()->route('admin.users.edit', $user)->with('info','Se asigno los roles correctamente');
+          }
     }
+    
+    
+    
 
     /**
      * Remove the specified resource from storage.

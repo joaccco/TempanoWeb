@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="shortcat icon" href="/favicon.ico"> 
     {{-- AlpineJS --}}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -31,8 +32,6 @@
   <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
   integrity="sha256-o9N1jGDZrf5tS       +Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
   crossorigin=""></script>
-
-
 </head>
 <body>
     <div id="app">

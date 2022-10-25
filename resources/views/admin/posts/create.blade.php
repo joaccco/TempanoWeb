@@ -13,6 +13,10 @@
             <div class="form-group">
                 {!! Form::label('title', 'Nombre:') !!}
                 {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre del post']) !!}
+
+                @error('title')
+                <small class="text-danger">{{$message}}</small>
+                @enderror
             </div>
 
             <div class="form-group">
@@ -20,15 +24,76 @@
                 {!! Form::text('slug', NULL, ['class' => 'form-control', 'placeholder' => 'Slug del post', 'readonly']) !!}
 
                 @error('slug')
-                <span class="text-danger">{{$message}}</span>
+                <small class="text-danger">{{$message}}</small>
                 @enderror
             </div>
 
             <div class="form-group">
-                {!! Form::label('category_id', 'Categoria') !!}
+                {!! Form::label('category_id', 'Categoria:') !!}
+                {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
+
+                @error('category_id')
+                <small class="text-danger">{{$message}}</small>
+                @enderror
             </div>
 
-            {!! Form::close() !!}
+            <div class="form-group">
+              <p class="font-weight-bold mb-1">Etiquetas:</p>
+              @foreach ($tags as $tag)
+
+                 <label class="mr-4">
+                    {!! Form::checkbox('tags[]', $tag->id, null) !!}
+                    {{$tag->name}}
+                 </label>
+
+              @endforeach
+
+              @error('tags')
+              <small class="text-danger">{{$message}}</small>
+              @enderror
+            </div>
+
+
+            <div class="form-group">
+                <p class="font-weight-bold mb-1">Estado:</p>
+
+                <label>
+                    {!! Form::radio('status', 1, true) !!}
+                    Borrador
+                </label>
+               
+                <label>
+                    {!! Form::radio('status', 2) !!}
+                    Publicado
+                </label>
+
+                @error('status')
+                <small class="text-danger">{{$message}}</small>
+                @enderror
+            </div>
+
+
+            <p class="font-weight-bold mb-1">Extracto:</p>
+            <div id="editor" class="form-group">
+              {!! Form::label('extract', 'Extracto del Post') !!}
+              {!! Form::textarea('extract', null, ['class' => 'form-control']) !!}
+
+              @error('extract')
+              <small class="text-danger">{{$message}}</small>
+              @enderror
+            </div>
+
+            <p class="font-weight-bold mt-4">Body:</p>
+            <div id="body" class="mt-4 form-group">
+              {!! Form::label('body', 'Cuerpo del Post') !!}
+              {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
+              @error('body')
+              <small class="text-danger">{{$message}}</small>
+              @enderror
+            </div>
+
+             {!! Form::submit('Crear Post', ['class' => 'mt-4 btn btn-primary'])!!}
+             {!! Form::close() !!}
         </div>
     </div>
 @stop
@@ -38,8 +103,10 @@
 @stop
 
 @section('js')
-    
-    //Plugin para asignar automaticamente una Slug a cada categoria
+     {{-- CKEditor --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
+
+    {{-- Plugin para asignar automaticamente una Slug a cada categoria --}}
     <script src="{{asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js')}}">
     </script>
 
@@ -52,5 +119,17 @@
             space: '-'
            });
         });
+
+         ClassicEditor
+          .create( document.querySelector( '#editor' ) )
+          .catch( error => {
+            console.error( error );
+        } );
+
+        ClassicEditor
+          .create( document.querySelector( '#body' ) )
+          .catch( error => {
+            console.error( error );
+        } );
     </script>
 @endsection

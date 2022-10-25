@@ -29,4 +29,3 @@ class PostsIndex extends Component
         return view('livewire.admin.posts-index', compact('posts'));
     }
 }
-

@@ -19,7 +19,8 @@ return new class extends Migration
 
             $table->string('title');
             $table->string('slug');
-            $table->string('extract');
+            $table->string('extract')->nullable();
+            $table->string('body')->nullable();
             $table->enum('status', [1, 2])->default(1);
 
             $table->unsignedBigInteger('category_id');

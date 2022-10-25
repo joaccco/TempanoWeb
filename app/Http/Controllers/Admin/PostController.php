@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Tag;
+use App\Http\Requests\StorePostRequest;
 
 class PostController extends Controller
 {
@@ -28,7 +30,9 @@ class PostController extends Controller
     {
         $categories = Category::pluck('name', 'id');
 
-        return view ('admin.posts.create', compact('categories'));
+        $tags = Tag::all();
+
+        return view ('admin.posts.create', compact('categories', 'tags'));
     }
 
     /**
@@ -37,9 +41,15 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        
+       $post = Post::create($request->all());
+
+       if ($request->tags) {
+        $post->tags()->attach($request->tags);
+       }
+
+       return redirect()->route('admin.posts.index', $post);
     }
 
     /**

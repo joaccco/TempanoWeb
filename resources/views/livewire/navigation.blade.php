@@ -30,8 +30,6 @@
                        class="text-black  hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md font-black">Productos</a> --}}
                    <a href="/posts"
                        class="text-black  hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md font-black">Posts</a>
-                   <a href="/posts"
-                       class="text-black  hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md font-black">Galeria de Imagenes</a>
                  </div>
               </div>
         </div>
@@ -94,9 +92,6 @@
 
             <a href="/posts"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Posts</a>
-
-            <a href="/galery"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Galeria</a>
         </div>
     </div>
 </nav>

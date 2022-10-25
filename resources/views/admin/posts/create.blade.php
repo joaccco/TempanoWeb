@@ -10,6 +10,8 @@
         <div class="card-body">
             {!! Form::open(['route' => 'admin.posts.store', 'autocomplete' => 'off']) !!}
 
+            {!! Form::hidden('user_id', auth()->user()->id) !!}
+            
             <div class="form-group">
                 {!! Form::label('title', 'Nombre:') !!}
                 {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre del post']) !!}
@@ -49,6 +51,7 @@
               @endforeach
 
               @error('tags')
+              <br>
               <small class="text-danger">{{$message}}</small>
               @enderror
             </div>
@@ -57,7 +60,7 @@
             <div class="form-group">
                 <p class="font-weight-bold mb-1">Estado:</p>
 
-                <label>
+                <label class="mr-2">
                     {!! Form::radio('status', 1, true) !!}
                     Borrador
                 </label>
@@ -68,29 +71,29 @@
                 </label>
 
                 @error('status')
-                <small class="text-danger">{{$message}}</small>
-                @enderror
+              <small class="text-danger">{{$message}}</small>
+               @enderror
             </div>
-
 
             <p class="font-weight-bold mb-1">Extracto:</p>
             <div id="editor" class="form-group">
-              {!! Form::label('extract', 'Extracto del Post') !!}
+              {!! Form::label('extract') !!}
               {!! Form::textarea('extract', null, ['class' => 'form-control']) !!}
-
-              @error('extract')
-              <small class="text-danger">{{$message}}</small>
-              @enderror
             </div>
+
+            @error('extract')
+              <small class="text-danger">{{$message}}</small>
+            @enderror
 
             <p class="font-weight-bold mt-4">Body:</p>
             <div id="body" class="mt-4 form-group">
-              {!! Form::label('body', 'Cuerpo del Post') !!}
+              {!! Form::label('body') !!}
               {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
-              @error('body')
-              <small class="text-danger">{{$message}}</small>
-              @enderror
             </div>
+
+            @error('body')
+            <small class="text-danger">{{$message}}</small>
+            @enderror
 
              {!! Form::submit('Crear Post', ['class' => 'mt-4 btn btn-primary'])!!}
              {!! Form::close() !!}

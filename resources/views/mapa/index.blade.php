@@ -28,8 +28,7 @@
     </section>
 
     <div id="map" style=" height: 730px ">
-      Puntos de venta
+      
     </div>
-    <script src="main.js"> </script>
   </div>
 @endsection

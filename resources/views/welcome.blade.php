@@ -19,20 +19,12 @@ x-transition:leave-end="opacity-0 scale-95">
         <div class="relative px-4 pt-6 sm:px-6 lg:px-8">
           <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
             <div class="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
-              <div class="flex w-full items-center justify-between md:w-auto">
+              <div class="mt-10 mb-10 flex h-full items-center justify-between md:w-auto">
                 <a href="#">
                   <span class="sr-only">Your Company</span>
-                  <h1>Hielos <b> Tempano</b></h1>
+                  <h1 class="text-2xl font-semibold text-slate-600">Hielos <b> Tempano</b></h1>
                 </a>
-                <div class="-mr-2 flex items-center md:hidden">
-                  <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <!-- Heroicon name: outline/bars-3 -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                  </button>
-                </div>
+
               </div>
             </div>
           </nav>
@@ -72,18 +64,26 @@ x-transition:leave-end="opacity-0 scale-95">
 
       <main class="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
         <div class="sm:text-center lg:text-left">
-          <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+          <h2 class="mb-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
             <span class="block xl:inline">Refrescando tus</span>
             <span class="block text-blue-600 xl:inline"> mejores momentos</span>
           </h2>
-          <p class="py-20 mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">Nada mejor que una bebida fresca en un clima tropical, no?.  <span class="block text-blue-600 xl:inline"> Tempano</span> te acompaña y refresca tus eventos</p>
-          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+          <blockquote class="mt-10 mb-10 text-xl italic text-center text-slate-900">
+            Nada mejor que una bebida fresca en un clima tropical, no?. 
+            <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-blue-500 relative inline-block">
+              <span class="relative text-white">Tempano</span>
+            </span>
+            te acompaña y refresca tus eventos
+          </blockquote>
+          <div class="py-20 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
             <div class="rounded-md shadow">
               <a href="/origen" class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-8 py-3 text-base font-medium text-white hover:bg-blue-700 md:py-4 md:px-10 md:text-lg">Iniciar </a>
             </div>
             <div class="mt-3 sm:mt-0 sm:ml-3">
               <a href="{{ route('admin.index') }}" class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-100 px-8 py-3 text-base font-medium text-blue-700 hover:bg-blue-200 md:py-4 md:px-10 md:text-lg">Ir Sistema</a>
             </div>
+           
+          
           </div>
         </div>
       </main>

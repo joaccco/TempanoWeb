@@ -308,12 +308,6 @@ return [
             'route'  => 'admin.index',
             'can'  => 'manage-blog',
         ],
-        [
-            'text' => 'Usuarios',
-            'route'  => 'admin.users.index',
-            'icon'  => 'fas fa-users fa-fw',
-        ],
-
         ['header' => 'Inicio'],
         [
              'text'        => 'Home',
@@ -328,13 +322,18 @@ return [
         ['header' => 'Opciones de Posts'],
         [
              'text'    => 'Posts',
-             'icon'    => 'fas fa-folder-open',
+             'icon'    => 'fas fa-folder-open fa-fw',
              'route' => 'admin.posts.index',
         ],
         [
             'text'    => 'Crear Post',
-            'icon'    => 'fas fa-plus',
+            'icon'    => 'fas fa-plus fa-fw',
             'route' => 'admin.posts.create',
+        ],
+        [
+            'text' => 'Categorias',
+            'route'  => 'admin.categories.index',
+            'icon' => 'fas fa-book fa-fw',
         ],
         ['header' => 'Chats'],
         [
@@ -390,12 +389,6 @@ return [
                 ],
             ],
         ],
-        ['header' => 'Posts'],
-        [
-            'text' => 'Categorias',
-            'route'  => 'admin.categories.index',
-            'icon_color' => 'red',
-        ],
         ['header' => 'Configuracion de Usuarios'],
         [
             'text' => 'change_password',
@@ -404,8 +397,8 @@ return [
         ],
         [
             'text' => 'Roles',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-users fa-fw',
+            'route'  => 'admin.users.index',
+            'icon'  => 'fas fa-users fa-fw',
         ],
     ],
 

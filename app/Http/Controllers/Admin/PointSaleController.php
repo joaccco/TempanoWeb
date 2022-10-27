@@ -50,7 +50,9 @@ class PointSaleController extends Controller
     {
         $request->validate([
             'name' => 'required|unique:point_sales',
-            'location' => 'required',
+            'lat' => 'required',
+            'lng' => 'required',
+            'detail' => 'required',
             'fridge_id' => 'required|unique:point_sales',
             'user_id' => 'required|unique:point_sales',
         ]);
@@ -83,7 +85,7 @@ class PointSaleController extends Controller
         $fridge = Fridge::pluck('number','id');
         $user = User::pluck('name','id');
 
-        return view('admin.pointsales.edit',[
+        return view('admin.pointsales.index',[
 
             'fridge'=>$fridge,
             'user'=>$user,
@@ -101,14 +103,16 @@ class PointSaleController extends Controller
     {
         $request->validate([
             'name' => "required:point_sales,name,$pointsale->id",
-            'location' => 'required',
+            'lat' => 'required',
+            'lng' => 'required',
+            'detail' => 'required',
             'fridge_id' => "required:point_sales,fridge_id,$pointsale->id",
             'user_id' => "required:point_sales,user_id,$pointsale->id",
         ]);
 
         $pointsale->update($request->all());
 
-        return redirect()->route('admin.pointsales.edit', $pointsale)->with('info', 'El Punto se actualizo con exito');
+        return redirect()->route('admin.pointsales.index', $pointsale)->with('info', 'El Punto se actualizo con exito');
     }
 
     /**

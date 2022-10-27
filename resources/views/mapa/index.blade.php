@@ -1,77 +1,35 @@
 @extends('layouts.app')
 @section('content')
   <div>
-    <h1 class="justify-center font-extrabold bg-gradient-to-t text-black">Puntos de venta</h1>
-  
-    <div id="map">
-      <style>
-        #map { 
-            width: 100%;
-            height: 550px;
-            z-index: -1000;
-            box-shadow: 5px 5px 5px rgb(46, 16, 16);
-           
+    <section>
+      <div class="bg-black text-white py-20">
+        <div class="container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
+          <div class="flex flex-col w-full lg:w-1/3 justify-center items-start p-8">
+            <h1 class="text-3xl md:text-5xl p-2 text-blue-600 tracking-loose">Tempano</h1>
+            <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Puntos de Venta
+            </h2>
+            <p class="text-sm md:text-base text-gray-50 mb-4">Explora los diferentes puntos de venta y contacta al que te quede mas cerca. Luego queda disfrutar de una experiencia refrescante, que esperas?.</p>
+            <a href="#"
+              class="mt-20 bg-transparent hover:bg-yellow-300 text-blue-700 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">
+              Explorar</a>
+          </div>
+          <div class="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
+            <div class="h-48 flex flex-wrap content-center">
+              <div>
+                <img class="inline-block mt-28 hidden xl:block" src="https://user-images.githubusercontent.com/54521023/116969935-c13d5b00-acd4-11eb-82b1-5ad2ff10fb76.png"></div>
+                <div>
+                  <img class="inline-block mt-24 md:mt-0 p-8 md:p-0"  src="https://user-images.githubusercontent.com/54521023/116969931-bedb0100-acd4-11eb-99a9-ff5e0ee9f31f.png"></div>
+                  <div>
+                    <img class="inline-block mt-28 hidden lg:block" src="https://user-images.githubusercontent.com/54521023/116969939-c1d5f180-acd4-11eb-8ad4-9ab9143bdb50.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </section>
 
-         }
-      </style>
-      <script class="">
-          //Cree el mapa 
-          var map = L.map('map').
-             setView([41.66, -4.72],15);
-          
-          //Config del Mapa y Derechos de Autor
-          L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>', 
-              maxZoom: 18 }).
-              addTo(map);
-
-          L.control.scale().addTo(map);
-
-          //Cree dos marcadores en el mapa
-          L.marker([-27.476613, -58.83161],{draggable: true}).addTo(map);
-          var marker = L.marker([-27.468607, -58.84346]).
-          addTo(map);
-
-
-          //Cree dos Circulos en el mapa
-          var circle = L.circle([-27.478507, -58.84346], {
-            color: 'blue',
-            fillColor: '#r03',
-            fillOpacity: 0.5,
-            radius: 200
-          }).addTo(map);
-
-          var circle = L.circle([-27.468607, -58.84346], {
-            color: 'green',
-            fillColor: '#t03',
-            fillOpacity: 0.2,
-            radius: 200
-          }).addTo(map);
-      
-
-          //Cree una PopUp
-          var popup = L.popup()
-            .setLatLng([-27.458907, -58.84346])
-            .setContent("Ola vendo yelo frio mi gente.")
-            .openOn(map);
-
-          //Cree una PopUp Pero mas Fachera
-          var popup = L.popup();
-          function onMapClick(e) { popup
-            .setLatLng(e.latlng)
-            .setContent("Estas en la direccion: " + e.latlng.toString())
-            .openOn(map);
-          } map.on('click', onMapClick);
-
-          //Tooltip
-          marker.bindTooltip("Depot").openTooltip();
-          var tooltip = L.tooltip()
-            .setLatLng(latlng)
-            .setContent('Hello world!<br />This is a nice tooltip.')
-            .addTo(map);         
-            
-      </script>
-     </div>
-</body>
+    <div id="map" style=" height: 730px ">
+      Puntos de venta
+    </div>
+    <script src="main.js"> </script>
   </div>
 @endsection

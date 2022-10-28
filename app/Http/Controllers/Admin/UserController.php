@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
 class UserController extends Controller
 {
+    public function __construct(){
+        $this->middleware('can:admin.users.index')->only('index');
+        $this->middleware('can:admin.users.edit')->only('edit', 'update');
+    }
    /**
      * Display a listing of the resource.
      *
@@ -90,7 +94,8 @@ class UserController extends Controller
         $user->update($request->all());
         return redirect()->route('admin.fridges.edit', $user)->with('info', 'La heladera se actualizo con exito');
 
-        { $user->roles()->sync($request->roles);
+        { 
+            $user->roles()->sync($request->roles);
             return redirect()->route('admin.users.edit', $user)->with('info','Se asigno los roles correctamente');
           }
     }

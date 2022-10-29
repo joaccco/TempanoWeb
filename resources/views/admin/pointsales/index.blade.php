@@ -24,10 +24,12 @@
                 <thead>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Ubicacion</th>
+                    <th>Latitud</th>
+                    <th>Longitud</th>
+                    <th>Detail</th>
                     <th>Heladera</th>
                     <th>Usuario</th>
-                    <th colspan="4"></th>
+                    <th colspan="6"></th>
 
                 </thead>
 
@@ -37,7 +39,9 @@
                      <tr>
                         <td>{{$pointsale->id}}</td>
                         <td>{{$pointsale->name}}</td>
-                        <td>{{$pointsale->location}}</td>
+                        <td>{{$pointsale->lat}}</td>
+                        <td>{{$pointsale->lng}}</td>
+                        <td>{{$pointsale->detail}}</td>
                         <td>{{$pointsale->fridge_id}}</td>
                         <td>{{$pointsale->user_id}}</td>
                         <td width="10px">

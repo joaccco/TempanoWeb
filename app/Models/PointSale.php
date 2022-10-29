@@ -9,7 +9,7 @@ class PointSale extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'location', 'fridge_id', 'user_id'];
+    protected $fillable = ['name', 'lat', 'lng', 'detail', 'fridge_id', 'user_id'];
     public function fridges(){
         return $this->belongsTo(Fridge::class);
     }

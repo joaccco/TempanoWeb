@@ -37,8 +37,8 @@ class StorePostRequest extends FormRequest
             $rules = array_merge ($rules, [
                 'category_id' => 'required',
                 'tags' => 'required',
-                'extract' => 'required',
-                'body' => 'required'
+               /*  'extract' => 'required',
+                'body' => 'required' */
              ]);
         }
 

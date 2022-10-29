@@ -17,7 +17,10 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->string('location');
+            $table->string('lat');
+            $table->string('lng');
+            
+            $table->string('detail');
             
             $table->unsignedBigInteger('fridge_id');
             $table->unsignedBigInteger('user_id');

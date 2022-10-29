@@ -31,10 +31,28 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('location', 'Ubicacion') !!}
-                {!! Form::text('location', NULL, ['class' => 'form-control', 'placeholder' => 'Asignar Marca']) !!}
+                {!! Form::label('lat', 'Latitud') !!}
+                {!! Form::text('lat', NULL, ['class' => 'form-control', 'placeholder' => 'Latitud']) !!}
 
-                @error('location')
+                @error('lat')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('lng', 'Longitud') !!}
+                {!! Form::text('lng', NULL, ['class' => 'form-control', 'placeholder' => 'Longitud']) !!}
+
+                @error('lng')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+            
+            <div class="form-group">
+                {!! Form::label('detail', 'Descripcion del Punto') !!}
+                {!! Form::text('detail', NULL, ['class' => 'form-control', 'placeholder' => 'Ingresar una descripcion']) !!}
+
+                @error('detail')
                     <span class="text-danger">{{$message}}</span>
                 @enderror
             </div>

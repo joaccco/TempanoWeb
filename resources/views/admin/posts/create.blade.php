@@ -95,7 +95,7 @@
             <small class="text-danger">{{$message}}</small>
             @enderror
 
-             {!! Form::submit('Crear Post', ['class' => 'mt-4 btn btn-primary'])!!}
+             {!! Form::submit('Crear Post', ['class' => 'mt-4 text-white btn bg-blue-600'])!!}
              {!! Form::close() !!}
         </div>
     </div>

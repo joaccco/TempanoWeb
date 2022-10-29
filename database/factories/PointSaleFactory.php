@@ -22,6 +22,7 @@ class PointSaleFactory extends Factory
             return [
                 'name' => $name,
                 'location' => $this->faker->sentence(),
+                'detail' => $this->faker->sentence(),
                 'fridge_id' => Fridge::all()->random()->id,
                 'user_id' => User::all()->random()->id,
             ];

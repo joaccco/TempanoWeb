@@ -30,12 +30,6 @@
         "laravel-echo": "^1.14.0",
         "leaflet": "^1.9.2",
         "pusher-js": "^7.4.0"
-    },
-    "workspaces": {
-        "workspace-a": "package.json",
-        "nohoist": [
-            "@tailwindcss/forms",
-            "@tailwindcss/forms/**"
-        ]
     }
+
 }

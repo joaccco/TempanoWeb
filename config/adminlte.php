@@ -313,22 +313,27 @@ return [
              'text'        => 'Home',
              'url'         => 'admin.home',
              'icon'        => 'fas fa-igloo fa-fw',
+             
         ],
         [
              'text'        => 'Remitos',
              'url'         => '#',
              'icon'        => 'fas fa-table fa-fw',
+             'can'   => 'admin.products.index',
+             
         ],
         ['header' => 'Opciones de Posts'],
         [
              'text'    => 'Posts',
              'icon'    => 'fas fa-folder-open fa-fw',
              'route' => 'admin.posts.index',
+             
         ],
         [
             'text'    => 'Crear Post',
             'icon'    => 'fas fa-plus fa-fw',
             'route' => 'admin.posts.create',
+            'can'   => 'admin.post.create',
         ],
         [
             'text' => 'Categorias',
@@ -341,15 +346,19 @@ return [
              'url' => 'admin.chats.index',
              'icon'        => 'fas fa-comments fa-fw',
         ],
-        ['header' => 'Administracion'],
+        ['header' => 'Administracion',
+        'can'   => 'admin.products.index',],
+        
         [
             'text'    => 'Fabrica',
             'icon'    => 'fas fa-mountain fa-fw',
+            'can'   => 'admin.products.index',
             'submenu' => [
                 [
                     'text' => 'Productos',
                     'route'  => 'admin.products.index',
                     'icon'    => 'fas fa-circle-check fa-fw',
+                    'can'   => 'admin.products.index',
                 ],
                 [
                     'text' => 'Produccion',
@@ -360,6 +369,7 @@ return [
                     'text' => 'Camaras',
                     'icon'    => 'fas fa-circle-check fa-fw',
                     'route'  => 'admin.cameras.index',
+                    'can'   => 'admin.cameras.index',
                 ],
                 [
                     'text' => 'Materia Prima',
@@ -376,16 +386,19 @@ return [
         [
             'text'    => 'Puntos de Venta',
             'icon'    => 'fas fa-icicles fa-fw',
+            'can'   => 'admin.products.index',
             'submenu' => [
                 [
                     'text' => 'Heladeras',
                     'route'  => 'admin.fridges.index',
                     'icon'    => 'fas fa-circle-check fa-fw',
+                    'can'   => 'admin.fridges.index',
                 ],
                 [
                     'text' => 'Comercios',
                     'route'  => 'admin.pointsales.index',
                     'icon'    => 'fas fa-circle-check fa-fw',
+                    'can'   => 'admin.pointsale.index',
                 ],
             ],
         ],
@@ -399,6 +412,7 @@ return [
             'text' => 'Roles',
             'route'  => 'admin.users.index',
             'icon'  => 'fas fa-users fa-fw',
+            'can'   => 'admin.users.index',
         ],
     ],
 

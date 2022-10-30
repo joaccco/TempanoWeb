@@ -11,6 +11,10 @@ use Illuminate\Http\Request;
 
 class PointSaleController extends Controller
 {
+    public function __construct(){
+        $this->middleware('can:admin.pointsale.index')->only('index');
+        $this->middleware('can:admin.pointsale.edit')->only('edit', 'update');
+    }
     /**
      * Display a listing of the resource.
      *

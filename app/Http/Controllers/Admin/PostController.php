@@ -11,6 +11,11 @@ use App\Http\Requests\StorePostRequest;
 
 class PostController extends Controller
 {
+    public function __construct(){
+        $this->middleware('can:admin.post.index')->only('index');
+        $this->middleware('can:admin.post.edit')->only('edit', 'update');
+        $this->middleware('can:admin.post.destroy')->only('destroy', 'update');
+    }
     /**
      * Display a listing of the resource.
      *

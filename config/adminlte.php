@@ -319,7 +319,7 @@ return [
              'text'        => 'Remitos',
              'url'         => '#',
              'icon'        => 'fas fa-table fa-fw',
-             'can'   => 'admin.products.index',
+             
              
         ],
         ['header' => 'Opciones de Posts'],
@@ -339,6 +339,7 @@ return [
             'text' => 'Categorias',
             'route'  => 'admin.categories.index',
             'icon' => 'fas fa-book fa-fw',
+            'can'   => 'admin.products.index',
         ],
         ['header' => 'Chats'],
         [
@@ -364,6 +365,7 @@ return [
                     'text' => 'Produccion',
                     'url'  => '#',
                     'icon'    => 'fas fa-circle-check fa-fw',
+                    'can'   => 'admin.products.index',
                 ],
                 [
                     'text' => 'Camaras',
@@ -375,11 +377,13 @@ return [
                     'text' => 'Materia Prima',
                     'icon'    => 'fas fa-circle-check fa-fw',
                      'url'  => '#',
+                     'can'   => 'admin.products.index',
                 ],
                 [
                     'text' => 'Desperdicios',
                     'icon'    => 'fas fa-circle-check fa-fw',
                     'url'  => '#',
+                    'can'   => 'admin.products.index',
                 ]
             ]
         ],

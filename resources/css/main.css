@@ -13,13 +13,13 @@
 }
  
 .marker {
-    background-image: url('public/img/marker-icon.png');
+    background-image: url('Tempano.png');
     background-size: cover;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
-}
+  }
 
 body { 
     margin: 0; 

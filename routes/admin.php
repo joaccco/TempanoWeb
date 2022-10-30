@@ -13,7 +13,7 @@ use App\Http\Controllers\Admin\UserController;
 // dd(Route::get('admin', [HomeController::class, 'index'])->name('index')); 
 use App\Http\Controllers\Admin\RoleController;
 Route::resource('admin', AdminController::class)->only('index');
-Route::resource('users', UserController::class)->only(['index', 'edit', 'update'])->names('admin.users');
+Route::resource('users', UserController::class) ->names('admin.users');
 Route::resource('categories', CategoryController::class)->names('admin.categories');
 Route::resource('fridges', FridgeController::class)->names('admin.fridges');
 Route::resource('products', ProductController::class)->names('admin.products');

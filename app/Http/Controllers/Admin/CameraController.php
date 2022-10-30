@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 class CameraController extends Controller
 {
-    public function __construct(){
-        $this->middleware('can:admin.camera.index')->only('index');
-        $this->middleware('can:admin.camera.edit')->only('edit', 'update');
-        $this->middleware('can:admin.camera.destroy')->only('destroy');
-    }
     /**
      * Display a listing of the resource.
      *

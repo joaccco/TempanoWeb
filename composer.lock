@@ -924,6 +924,18 @@
         },
         {
             "name": "guzzlehttp/psr7",
+<<<<<<< HEAD
+            "version": "2.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "3148458748274be1546f8f2809a6c09fe66f44aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/3148458748274be1546f8f2809a6c09fe66f44aa",
+                "reference": "3148458748274be1546f8f2809a6c09fe66f44aa",
+=======
             "version": "2.4.3",
             "source": {
                 "type": "git",
@@ -934,6 +946,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/psr7/zipball/67c26b443f348a51926030c83481b85718457d3d",
                 "reference": "67c26b443f348a51926030c83481b85718457d3d",
+>>>>>>> cdea5f3d605b6eee5624455bf2e7a657d172b665
                 "shasum": ""
             },
             "require": {
@@ -1023,7 +1036,11 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
+<<<<<<< HEAD
+                "source": "https://github.com/guzzle/psr7/tree/2.4.2"
+=======
                 "source": "https://github.com/guzzle/psr7/tree/2.4.3"
+>>>>>>> cdea5f3d605b6eee5624455bf2e7a657d172b665
             },
             "funding": [
                 {
@@ -1039,7 +1056,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2022-10-25T13:49:28+00:00"
+=======
             "time": "2022-10-26T14:07:24+00:00"
+>>>>>>> cdea5f3d605b6eee5624455bf2e7a657d172b665
         },
         {
             "name": "jaybizzle/crawler-detect",
@@ -8807,6 +8828,18 @@
         },
         {
             "name": "spatie/laravel-ignition",
+<<<<<<< HEAD
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-ignition.git",
+                "reference": "c21309ebf6657e0c38083afac8af9baa12885676"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/c21309ebf6657e0c38083afac8af9baa12885676",
+                "reference": "c21309ebf6657e0c38083afac8af9baa12885676",
+=======
             "version": "1.6.1",
             "source": {
                 "type": "git",
@@ -8817,6 +8850,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/2b79cf6ed40946b64ac6713d7d2da8a9d87f612b",
                 "reference": "2b79cf6ed40946b64ac6713d7d2da8a9d87f612b",
+>>>>>>> cdea5f3d605b6eee5624455bf2e7a657d172b665
                 "shasum": ""
             },
             "require": {
@@ -8893,7 +8927,11 @@
                     "type": "github"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2022-10-25T08:38:04+00:00"
+=======
             "time": "2022-10-26T17:39:54+00:00"
+>>>>>>> cdea5f3d605b6eee5624455bf2e7a657d172b665
         },
         {
             "name": "theseer/tokenizer",

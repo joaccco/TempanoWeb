@@ -26,9 +26,6 @@
               </div>
             </div>
     </section>
-
-    <div id="map" style=" height: 730px ">
-      
-    </div>
   </div>
+  @livewire('map')
 @endsection

@@ -5,13 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Camera;
 use Illuminate\Http\Request;
-
+use Spatie\Permission\Models\Role;
 class CameraController extends Controller
 {
-    public function __construct(){
-        $this->middleware('can:admin.cameras.index')->only('index');
-        $this->middleware('can:admin.cameras.edit')->only('edit', 'update');
-    }
     /**
      * Display a listing of the resource.
      *

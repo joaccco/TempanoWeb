@@ -9,10 +9,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-    public function __construct(){
-        $this->middleware('can:admin.product.index')->only('index');
-        
-    }
     /**
      * Display a listing of the resource.
      *

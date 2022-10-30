@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function __construct(){
-        $this->middleware('can:admin.index')->only('index');
-        
-    }
     /**
      * Display a listing of the resource.
      *

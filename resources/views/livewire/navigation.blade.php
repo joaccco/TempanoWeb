@@ -17,7 +17,7 @@
         <div class="md:flex md:items-center md:gap-12 flex flex-1 ">
               {{-- Logotipo --}}
               <a href="/" class="flex flex-shrink-0">
-                <img class="hidden h-24 lg:block" src="/img/Tempano.png" alt="Tempano Hielos">
+                <img class="hidden h-28 lg:block" src="/img/logowh.png" alt="Tempano Hielos">
               </a>
               {{-- Menu LG --}}
               <div class="flex h-16 items-center justify-between text-white hidden sm:ml-20 sm:block">

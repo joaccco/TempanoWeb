@@ -50,11 +50,11 @@ Route::get('/galery', function (){
 }); */
 
 //Chats
-Auth::routes();
-Route::get('/chats', [App\Http\Controllers\ChatsController::class, 'index']);
-Route::post('/messages', [App\Http\Controllers\ChatsController::class, 'sendMessage']);
-Route::get('/messages', [App\Http\Controllers\ChatsController::class, 'fetchMessages']);
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Auth::routes();
+//Route::get('/chats', [App\Http\Controllers\ChatsController::class, 'index']);
+//Route::post('/messages', [App\Http\Controllers\ChatsController::class, 'sendMessage']);
+//Route::get('/messages', [App\Http\Controllers\ChatsController::class, 'fetchMessages']);
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 //Posts Vistas-User

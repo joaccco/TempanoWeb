@@ -1,13 +1,10 @@
 {
-  "type": "FeatureCollection",
-  "name": "features",
   "features": [
     {
       "type": "Feature",
       "properties": {
         "name": "Point 1",
-        "detail": "Point 1 Horarios: 9am a 22pm",
-        "posts": "post 1"
+        "detail": "Point 1 Horarios: 9am a 22pm"
       },
       "geometry": {
         "coordinates": [
@@ -22,8 +19,7 @@
       "type": "Feature",
       "properties": {
         "name": "Upy Gutemberg",
-        "detail": "Horarios: 8am a 12pm",
-        "posts": "post 1"
+        "detail": "Horarios: 8am a 12pm"
       },
       "geometry": {
         "coordinates": [
@@ -38,8 +34,7 @@
       "type": "Feature",
       "properties": {
         "name": "Point 2",
-        "detail": "Horarios: 20 pm a 12am",
-        "posts": "post 1"
+        "detail": "Horarios: 20 pm a 12am"
       },
       "geometry": {
         "coordinates": [
@@ -50,5 +45,6 @@
       },
       "id": "d33bc4b6b34159d9d1d2c5a639ff2603"
     }
-  ]
+  ],
+  "type": "FeatureCollection"
 }

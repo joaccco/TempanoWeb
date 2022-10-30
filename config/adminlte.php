@@ -344,7 +344,7 @@ return [
         ['header' => 'Chats'],
         [
              'text'=> 'Chats',
-             'url' => 'admin.chats.index',
+             'url' => 'https://wa.me/5493795033334',
              'icon'        => 'fas fa-comments fa-fw',
         ],
         ['header' => 'Administracion',

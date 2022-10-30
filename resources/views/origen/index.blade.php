@@ -34,16 +34,16 @@
           <div class="border-t border-gray-200 pt-4">
             <dt class="font-medium text-gray-900">Tus Eventos</dt>
             <dd class="mt-2 mb-2 text-sm text-gray-500">Estas planeando realizar un evento en Corrientes?, nosotros te podemos ayudar a <b>refrescar</b> las bebidas, solamente nos tenes que contactar. Si necesitas una gran cantidad de Bolsas tenemos una <b>camara movil</b> con equipo de frio y capacidad excelentes</dd>
-            <a href="/event" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 my-1 rounded-lg">
-              Rellenar Formulario
+            <a href="https://wa.me/5493795033334" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 my-1 rounded-lg">
+              Ir al Chat 
             </a>
           </div>
   
           <div class="border-t border-gray-200 pt-4">
             <dt class="font-medium text-gray-900">Queres ser Vendedor?</dt>
-            <dd class="mt-2 mb-2 text-sm text-gray-500">Si estas interesado en vender nuestros productos, tenemos heladeras de distintas capacidades, solo debemos analizar cual combina mejor con tu local. Rellena el siguiente formulario y estaremos en contacto</dd>
-            <a href="/client" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">
-              Rellenar Formulario
+            <dd class="mt-2 mb-2 text-sm text-gray-500">Si estas interesado en vender nuestros productos, tenemos heladeras de distintas capacidades, solo debemos analizar cual combina mejor con tu local. Escribenos por Whatsapp y estaremos en contacto contigo.</dd>
+            <a href="https://wa.me/5493795033334" class="bg-blue-800 hover:bg-blue-900 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg">
+              Ir al Chat
             </a>
           </div>
         </dl>

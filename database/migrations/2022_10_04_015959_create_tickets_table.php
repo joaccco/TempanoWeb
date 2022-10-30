@@ -21,10 +21,12 @@ return new class extends Migration
             $table->string('mount');
             $table->boolean('status')->default(1);
             $table->string('detail');
-            
+
             $table->unsignedBigInteger('pointsale_id');
+            $table->unsignedBigInteger('user_id');
 
             $table->foreign('pointsale_id')->references('id')->on('point_sales')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
         });

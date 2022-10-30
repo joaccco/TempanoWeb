@@ -9,9 +9,9 @@ use App\Models\Fridge;
 class FridgeController extends Controller
 {
     public function __construct(){
-        $this->middleware('can:admin.fridge.index')->only('index');
-        $this->middleware('can:admin.fridge.edit')->only('edit', 'update');
-        $this->middleware('can:admin.fridge.destroy')->only('destroy', 'update');
+        $this->middleware('can:admin.fridges.index')->only('index');
+        $this->middleware('can:admin.fridges.edit')->only('edit', 'update');
+        $this->middleware('can:admin.fridges.destroy')->only('destroy', 'update');
     }
     /**
      * Display a listing of the resource.

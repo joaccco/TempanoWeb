@@ -81,14 +81,7 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => "required|unique:users,email,$user->id",
-            'password' => 'required',
-        ]);
-
-        $user->update($request->all());
-        return redirect()->route('admin.fridges.edit', $user)->with('info', 'La heladera se actualizo con exito');
+        
 
         { $user->roles()->sync($request->roles);
             return redirect()->route('admin.users.edit', $user)->with('info','Se asigno los roles correctamente');

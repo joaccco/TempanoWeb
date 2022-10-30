@@ -12,7 +12,7 @@ class UserController extends Controller
         $this->middleware('can:admin.users.index')->only('index');
         $this->middleware('can:admin.users.edit')->only('edit', 'update');
     }
-    /**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

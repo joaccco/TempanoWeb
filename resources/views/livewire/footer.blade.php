@@ -6,7 +6,7 @@
             <a href="/changelog">Mail</a>
             <div class="h-4 w-px bg-slate-500/20">
             </div>
-            <a href="/changelog">Whatsapp</a>
+            <a href="https://wa.me/5493795033334">Whatsapp</a>
             <div class="h-4 w-px bg-slate-500/20">
             </div>
             <a href="https://www.instagram.com/hielo_tempano/">Instagram</a>

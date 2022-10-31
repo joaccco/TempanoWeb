@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\FridgeController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CameraController;
 use App\Http\Controllers\Admin\PointSaleController;
+use App\Http\Controllers\Admin\TicketsController;
 
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\UserController;
@@ -21,3 +22,4 @@ Route::resource('cameras', CameraController::class)->names('admin.cameras');
 Route::resource('pointsales', PointSaleController::class)->names('admin.pointsales');
 //Route::resource('chats', ChatsController::class)->names('admin.chats');
 Route::resource('posts', PostController::class)->names('admin.posts');
+Route::resource('tickets', TicketsController::class)->names('admin.tickets');

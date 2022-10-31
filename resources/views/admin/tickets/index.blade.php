@@ -36,12 +36,12 @@
 
             <tbody>
 
-             @foreach ($fridges as $fridge)
+             @foreach ($tickets as $ticket)
                  <tr>
-                    <td>{{$fridge->id}}</td>
-                    <td>{{$fridge->number}}</td>
-                    <td>{{$fridge->brand}}</td>
-                    <td>{{$fridge->capability}}</td>
+                    <td>{{$ticket->id}}</td>
+                    <td>{{$ticket->number}}</td>
+                    <td>{{$ticket->brand}}</td>
+                    <td>{{$ticket->capability}}</td>
                     <td width="10px">
                         <a  class="text-white rounded-lg btn bg-blue-600" href="{{route('admin.fridges.edit', $fridge)}}">Editar</a></td>
                     <td width="10px">

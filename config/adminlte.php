@@ -317,7 +317,7 @@ return [
         ],
         [
              'text'        => 'Remitos',
-             'url'         => '#',
+             'route'         => 'admin.tickets.index',
              'icon'        => 'fas fa-table fa-fw',
              
              

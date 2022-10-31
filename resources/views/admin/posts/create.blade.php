@@ -76,7 +76,7 @@
             </div>
 
             <p class="font-weight-bold mb-1">Extracto:</p>
-            <div id="editor" class="form-group">
+            <div class="form-group">
               {!! Form::label('extract') !!}
               {!! Form::textarea('extract', null, ['class' => 'form-control']) !!}
             </div>
@@ -86,7 +86,7 @@
             @enderror
 
             <p class="font-weight-bold mt-4">Body:</p>
-            <div id="body" class="mt-4 form-group">
+            <div class="mt-4 form-group">
               {!! Form::label('body') !!}
               {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
             </div>

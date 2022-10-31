@@ -319,7 +319,7 @@ return [
              'text'        => 'Remitos',
              'url'         => '#',
              'icon'        => 'fas fa-table fa-fw',
-             
+             'can'   => 'admin.products.index',
              
         ],
         ['header' => 'Opciones de Posts'],
@@ -333,7 +333,7 @@ return [
             'text'    => 'Crear Post',
             'icon'    => 'fas fa-plus fa-fw',
             'route' => 'admin.posts.create',
-            'can'   => 'admin.post.create',
+            'can'   => 'admin.posts.create',
         ],
         [
             'text' => 'Categorias',
@@ -348,7 +348,7 @@ return [
              'icon'        => 'fas fa-comments fa-fw',
         ],
         ['header' => 'Administracion',
-        'can'   => 'admin.products.index',],
+         'can'   => 'admin.products.index',],
         
         [
             'text'    => 'Fabrica',

@@ -7,6 +7,7 @@
 
 @section('content')
 <div class="card">
+    <p>Bienvenido a Administracion.</p>
     <div class="card-header">
         <a class="btn btn-primary" href="{{route('admin.tickets.create')}}">Agregar Remito</a>
     </div>

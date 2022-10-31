@@ -6,6 +6,7 @@
 @stop
 
 @section('content')
+<p>Bienvenido a Administracion.</p>
     <div class="card">
         <div class="card-body">
             {!! Form::open(['route' => 'admin.posts.store', 'autocomplete' => 'off']) !!}

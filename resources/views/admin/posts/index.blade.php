@@ -7,6 +7,7 @@
 @stop
 
 @section('content')
+<p>Bienvenido a Administracion.</p>
     @livewire('admin.posts-index')
 @stop
 

@@ -17,8 +17,4 @@ class Production extends Model
         return $this->belongsTo(Camera::class);
     }
 
-    public function substances(){
-        return $this->belongsTo(Substance::class);
-    }
-
 }

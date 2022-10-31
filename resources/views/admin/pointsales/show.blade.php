@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Bienvenido la concha de tu hermana.</p>
+<p>Bienvenido a Administracion.</p>
 @stop
 
 @section('css')

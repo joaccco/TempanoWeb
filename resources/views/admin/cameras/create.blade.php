@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Bienvenido la concha de tu hermana.</p>
+    <p>Bienvenido a Administracion.</p>
     <div class="card">
         <div class="card-body">
             {!! Form::open(['route' => 'admin.cameras.store']) !!}

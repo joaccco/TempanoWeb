@@ -3,15 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Production;
 use Illuminate\Http\Request;
 
 class ProductionsController extends Controller
 {
-    public function __construct(){
+    /* public function __construct(){
         $this->middleware('can:admin.productions.index')->only('index');
         $this->middleware('can:admin.productions.edit')->only('edit', 'update');
         $this->middleware('can:admin.productions.destroy')->only('destroy');
-    }
+    } */
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +20,9 @@ class ProductionsController extends Controller
      */
     public function index()
     {
-        //
+        $productions = Production::all();
+        
+        return view('admin.productions.index', compact('productions'));
     }
 
     /**

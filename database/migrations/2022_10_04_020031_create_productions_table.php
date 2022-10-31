@@ -22,11 +22,9 @@ return new class extends Migration
 
             $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('camera_id');
-            $table->unsignedBigInteger('substance_id');
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->foreign('camera_id')->references('id')->on('cameras')->onDelete('cascade');
-            $table->foreign('substance_id')->references('id')->on('substances')->onDelete('cascade');
 
             $table->timestamps();
         });

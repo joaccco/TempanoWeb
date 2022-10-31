@@ -7,6 +7,7 @@
 
 @section('content')
     <div class="card">
+      <p>Bienvenido a Administracion.</p>
       <h2 class="mt-4 ml-4 text-lg">Nuevo<strong class="text-blue-800w"> REMITO</strong> </h2>
         <div class="card-body">
             {!! Form::open(['route' => 'admin.tickets.store', 'autocomplete' => 'off']) !!}

@@ -65,9 +65,9 @@ return [
 
     'logo' => '<b>Hielos</b>Tempano',
     'logo_img' => 'img/logowh.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img_class' => 'brand-image img-circle',
     'logo_img_xl' => null,
-    'logo_img_xl_class' => 'brand-image-4xl',
+    'logo_img_xl_class' => 'brand-image-6xl',
     'logo_img_alt' => 'Admin Logo',
 
     /*
@@ -316,7 +316,7 @@ return [
              
         ],
         [
-             'text'        => 'Remitos',
+             'text'        => 'Ver Remitos',
              'route'         => 'admin.tickets.index',
              'icon'        => 'fas fa-table fa-fw',
              'can'   => 'admin.products.index',
@@ -324,7 +324,7 @@ return [
         ],
         ['header' => 'Opciones de Posts'],
         [
-             'text'    => 'Posts',
+             'text'    => 'Ver Posts',
              'icon'    => 'fas fa-folder-open fa-fw',
              'route' => 'admin.posts.index',
              
@@ -341,9 +341,9 @@ return [
             'icon' => 'fas fa-book fa-fw',
             'can'   => 'admin.products.index',
         ],
-        ['header' => 'Chats'],
+        ['header' => 'Chat'],
         [
-             'text'=> 'Chats',
+             'text'=> 'Whatsapp',
              'url' => 'https://wa.me/5493795033334',
              'icon'        => 'fas fa-comments fa-fw',
         ],
@@ -363,21 +363,15 @@ return [
                 ],
                 [
                     'text' => 'Produccion',
-                    'url'  => '#',
+                    'route'  => 'admin.productions.index',
                     'icon'    => 'fas fa-circle-check fa-fw',
-                    'can'   => 'admin.products.index',
+                   /*  'can'   => 'admin.productions.index', */
                 ],
                 [
                     'text' => 'Camaras',
                     'icon'    => 'fas fa-circle-check fa-fw',
                     'route'  => 'admin.cameras.index',
                     'can'   => 'admin.cameras.index',
-                ],
-                [
-                    'text' => 'Materia Prima',
-                    'icon'    => 'fas fa-circle-check fa-fw',
-                     'url'  => '#',
-                     'can'   => 'admin.products.index',
                 ],
                 [
                     'text' => 'Desperdicios',

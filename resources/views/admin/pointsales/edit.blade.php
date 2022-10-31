@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Bienvenido.</p>
+<p>Bienvenido a Administracion.</p>
     @if (session('info'))
         <div class="alert alert-success">
             <strong>{{session('info')}}</strong>

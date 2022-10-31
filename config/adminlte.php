@@ -319,7 +319,7 @@ return [
              'text'        => 'Remitos',
              'route'         => 'admin.tickets.index',
              'icon'        => 'fas fa-table fa-fw',
-             
+             'can'   => 'admin.products.index',
              
         ],
         ['header' => 'Opciones de Posts'],
@@ -333,7 +333,7 @@ return [
             'text'    => 'Crear Post',
             'icon'    => 'fas fa-plus fa-fw',
             'route' => 'admin.posts.create',
-            'can'   => 'admin.post.create',
+            'can'   => 'admin.posts.create',
         ],
         [
             'text' => 'Categorias',
@@ -348,7 +348,7 @@ return [
              'icon'        => 'fas fa-comments fa-fw',
         ],
         ['header' => 'Administracion',
-        'can'   => 'admin.products.index',],
+         'can'   => 'admin.products.index',],
         
         [
             'text'    => 'Fabrica',
@@ -396,16 +396,16 @@ return [
                     'text' => 'Heladeras',
                     'route'  => 'admin.fridges.index',
                     'icon'    => 'fas fa-circle-check fa-fw',
-                    'can'   => 'admin.fridges.index',
+                    'can'   => 'admin.products.index',
                 ],
                 [
                     'text' => 'Comercios',
                     'route'  => 'admin.pointsales.index',
                     'icon'    => 'fas fa-circle-check fa-fw',
-                    'can'   => 'admin.pointsale.index',
+                    'can'   => 'admin.products.index',
                 ],
-            ],
-        ],
+            ]
+         ],
         ['header' => 'Configuracion de Usuarios'],
         [
             'text' => 'change_password',

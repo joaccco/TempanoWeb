@@ -396,16 +396,16 @@ return [
                     'text' => 'Heladeras',
                     'route'  => 'admin.fridges.index',
                     'icon'    => 'fas fa-circle-check fa-fw',
-                    'can'   => 'admin.fridges.index',
+                    'can'   => 'admin.products.index',
                 ],
                 [
                     'text' => 'Comercios',
                     'route'  => 'admin.pointsales.index',
                     'icon'    => 'fas fa-circle-check fa-fw',
-                    'can'   => 'admin.pointsale.index',
+                    'can'   => 'admin.products.index',
                 ],
-            ],
-        ],
+            ]
+         ],
         ['header' => 'Configuracion de Usuarios'],
         [
             'text' => 'change_password',

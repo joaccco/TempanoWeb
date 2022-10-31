@@ -71,4 +71,8 @@ class User extends Authenticatable
     public function pointsales(){
         return $this->belongsTo(PointSale::class);
     }
+
+    public function tickets(){
+        return $this->hasMany(Ticket::class);
+    }
 }

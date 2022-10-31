@@ -7,9 +7,9 @@
 
 @section('content')
     <div class="card">
+      <h2 class="mt-4 ml-4 text-lg">Nuevo<strong class="text-blue-800w"> REMITO</strong> </h2>
         <div class="card-body">
             {!! Form::open(['route' => 'admin.tickets.store', 'autocomplete' => 'off']) !!}
-
             {!! Form::hidden('user_id', auth()->user()->id) !!}
             
             <div class="form-group">
@@ -22,21 +22,38 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('date', 'Fecha:') !!}
-                {!! Form::date('date', NULL, ['class' => 'form-control', 'placeholder' => 'Fecha']) !!}
+              {!! Form::label('date', 'Fecha:') !!}
+              {!! Form::date('date', NULL, ['class' => 'form-control', 'placeholder' => 'Fecha']) !!}
 
-                @error('date')
-                <small class="text-danger">{{$message}}</small>
-                @enderror
+              @error('date')
+              <small class="text-danger">{{$message}}</small>
+              @enderror
+          </div>
+
+            <div class="form-group">
+              {!! Form::label('user_id', 'Usuario:') !!}
+              {!! Form::select('user_id', $users, null, ['class' => 'form-control']) !!}
+
+              @error('user_id')
+              <small class="text-danger">{{$message}}</small>
+              @enderror
             </div>
 
             <div class="form-group">
-                {!! Form::label('mount', 'Precio:') !!}
-                {!! Form::select('mount', $categories, null, ['class' => 'form-control']) !!}
+              <p class="font-weight-bold mb-1">Producto:</p>
+              @foreach ($products as $product)
 
-                @error('mount')     
-                <small class="text-danger">{{$message}}</small>
-                @enderror
+              <label class="mr-4">
+                 {!! Form::checkbox('products[]', $product->id, null) !!}
+                 {{ $product->name }}
+              </label>
+              <input type="text" id="cantidad">
+
+              @endforeach
+
+              @error('product_id')
+              <small class="text-danger">{{$message}}</small>
+              @enderror
             </div>
 
             <div class="form-group">
@@ -46,32 +63,31 @@
                   {!! Form::radio('status', 1, true) !!}
                   Cuenta Corriente
               </label>
-             
+          
               <label>
                   {!! Form::radio('status', 2) !!}
                   Pagado
               </label>
 
               @error('status')
-            <small class="text-danger">{{$message}}</small>
-             @enderror
-          </div>
-
-            <p class="font-weight-bold mb-1">Obsevaciones:</p>
-            <div id="editor" class="form-group">
-              {!! Form::label('detail') !!}
-              {!! Form::textarea('detail', null, ['class' => 'form-control']) !!}
+                <small class="text-danger">{{$message}}</small>
+              @enderror
             </div>
 
-            @error('detail')
-              <small class="text-danger">{{$message}}</small>
-            @enderror
+            <div id="editor" class="form-group">
+              {!! Form::label('detail', 'Observaciones') !!}
+              {!! Form::textarea('detail', null, ['class' => 'form-control']) !!}
+
+              @error('detail')
+                <small class="text-danger">{{$message}}</small>
+              @enderror
+            </div>
 
             <div class="form-group">
-              {!! Form::label('pointsale_id', 'Punto de Venta:') !!}
-              {!! Form::select('pointsale_id', $categories, null, ['class' => 'form-control']) !!}
+              {!! Form::label('mount', 'Precio:') !!}
+              {!! Form::text('mount', null, ['class' => 'form-control']) !!}
 
-              @error('pointsale_id')
+              @error('mount')     
               <small class="text-danger">{{$message}}</small>
               @enderror
           </div>

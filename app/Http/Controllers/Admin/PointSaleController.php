@@ -28,7 +28,7 @@ class PointSaleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
         $fridge = Fridge::pluck('number','id');
         $user = User::pluck('name','id');

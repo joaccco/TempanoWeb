@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Ticket;
+use App\Models\User;
 
 class TicketsController extends Controller
 {
@@ -27,7 +29,10 @@ class TicketsController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::all();
+        $users = User::pluck('name', 'id');
+
+        return view('admin.tickets.create', compact('products', 'users'));
     }
 
     /**
@@ -38,7 +43,14 @@ class TicketsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $ticket = Ticket::create($request->all());
+
+        if ($request->product) {
+            $ticket->products()->attach($request->products);
+           }
+
+        return redirect()->route('admin.tickets.edit', $ticket)->with('info', 'El remito se almaceno con exito'); 
     }
 
     /**
@@ -49,7 +61,7 @@ class TicketsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view ('admin.tickets.show', compact('ticket'));
     }
 
     /**
@@ -60,7 +72,10 @@ class TicketsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::pluck('name', 'id');
+        $user = User::pluck('user', 'id');
+
+        return view('admin.tickets.create', compact('products', 'users'));
     }
 
     /**
@@ -70,9 +85,21 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Ticket $ticket)
     {
-        //
+        $request->validate([
+            'number' => "required|unique:products,number,$ticket->id",
+            'date' => 'required|unique:products',
+            'mount' => 'required',
+            'status' => 'required',
+            'detail' => 'required',
+            'product_id' => 'required',
+            'user_id' => 'required',
+
+        ]);
+        $ticket = Ticket::update($request->all());
+        
+        return redirect()->route('admin.tickets.edit', $ticket)->with('info', 'El remito se actualizo con exito'); 
     }
 
     /**

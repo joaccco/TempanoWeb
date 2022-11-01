@@ -1,4 +1,4 @@
-<nav class="py-2 bg-gradient-to-r from-blue-900 to-blue-300" x-data="{ open: false }">
+<nav class="py-2 z-30 fixed w-full bg-gradient-to-r from-blue-900 to-blue-300" x-data="{ open: false }">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16">
           {{-- Boton Hamburguesa --}}
@@ -54,9 +54,9 @@
             </div>
           </div>
            @else
-            <div>
-              <a href="{{ route('login') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">SoyUsuario</a>
-              <a href="{{ route('register') }}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3  py-2 rounded-md text-sm font-medium">Registrarme</a>
+            <div class="mt-5">
+              <a href="{{ route('login') }}" class=" text-gray-300 hover:bg-blue-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">SoyUsuario</a>
+              <a href="{{ route('register') }}" class="text-gray-300 hover:bg-blue-500 hover:text-white px-3  py-2 rounded-md text-sm font-medium">Registrarme</a>
             </div>
         @endauth
       </div>

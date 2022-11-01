@@ -16,7 +16,7 @@ x-transition:leave-end="opacity-0 scale-95">
       </svg>
 
       <div>
-        <div class="relative px-4 pt-6 sm:px-6 lg:px-8">
+        <div class="relative mt-20 px-4 pt-6 sm:px-6 lg:px-8">
           <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
             <div class="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
               <div class="mt-10 mb-10 flex h-full items-center justify-between md:w-auto">
@@ -77,10 +77,10 @@ x-transition:leave-end="opacity-0 scale-95">
           </blockquote>
           <div class="py-20 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
             <div class="rounded-md shadow">
-              <a href="/origen" class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-8 py-3 text-base font-medium text-white hover:bg-blue-700 md:py-4 md:px-10 md:text-lg">Iniciar </a>
+              <a href="/origen" class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-8 py-3 text-base font-medium text-white hover:bg-blue-700 md:py-4 md:px-10 md:text-lg">Iniciar</a>
             </div>
             <div class="mt-3 sm:mt-0 sm:ml-3">
-              <a href="{{ route('admin.index') }}" class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-100 px-8 py-3 text-base font-medium text-blue-700 hover:bg-blue-200 md:py-4 md:px-10 md:text-lg">Soy Cliente</a>
+              <a href="{{ route('admin.index') }}" class="flex w-full items-center justify-center rounded-md border border-transparent bg-blue-100 px-8 py-3 text-base font-medium text-blue-700 hover:bg-blue-200 md:py-4 md:px-10 md:text-lg">Sistema</a>
             </div>
            
           

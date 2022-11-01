@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function __construct(){
-        $this->middleware('can:admin.users.index')->only('index');
+        $this->middleware('can:admin')->only('index');
     }
     /**
      * Display a listing of the resource.

@@ -3,7 +3,7 @@
 @section('content')
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <img class="h-2/6 w-2/5" src="/img/logobl.png" alt="">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />

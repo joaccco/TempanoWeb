@@ -9,8 +9,8 @@ class Production extends Model
 {
     use HasFactory;
 
-    public function products(){
-        return $this->belongsTo(Product::class);
+    public function quantities(){
+        return $this->belongsTo(Quantity::class);
     }
 
     public function cameras(){

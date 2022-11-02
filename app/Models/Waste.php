@@ -11,7 +11,6 @@ class Waste extends Model
 
     public function products(){
         return $this->belongsTo(Product::class);
-     
     }
     public function cameras(){
         return $this->belongsTo(Camera::class);

@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Production extends Model
 {
     use HasFactory;
+    protected $fillable = ['date', 'detail', 'product_id', 'quantity', 'camera_id'];
 
-    public function quantities(){
-        return $this->belongsTo(Quantity::class);
+    public function products(){
+        return $this->hasMany(Product::class);
     }
 
     public function cameras(){

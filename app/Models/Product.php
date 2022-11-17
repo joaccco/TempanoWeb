@@ -8,17 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'code', 'price', 'detail'];
+    protected $fillable = ['name', 'code', 'price', 'detail', 'stock', 'alert'];
 
-    public function production(){
-        return $this->belongsTo(Production::class);
+    public function details(){
+        return $this->hasMany(Detail::class);
+    } 
+
+    public function productions(){
+        return $this->BelongsToMany(Production::class);
     }
 
     public function wastes(){
-        return $this->belongsTo(Waste::class);
-    }
-
-    public function tickets(){
-        return $this->belongsToMany(Ticket::class);
+        return $this->BelongsToMany(Waste::class);
     }
 }

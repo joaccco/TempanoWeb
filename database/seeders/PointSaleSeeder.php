@@ -5,8 +5,6 @@ namespace Database\Seeders;
 use App\Models\PointSale;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Fridge;
-use App\Models\User;
 
 class PointSaleSeeder extends Seeder
 {
@@ -17,15 +15,16 @@ class PointSaleSeeder extends Seeder
      */
     public function run()
     {
-       /* $pointsales = PointSale::factory(40)->create();
-       foreach ($pointsales as $pointsale) {
-           Fridge::factory(50)->create([
-               'fridge_id' => $pointsale->id
-           ]);
+        /* PointSale::create([
+            'name'   =>   'Dark Store',
+            'lat'   =>   '59.999',
+            'lng'   =>   '27.909',
+            'schedule'   =>   'Lunes a Viernes de 7:00 AM a 20:20 PM', 
+            'motto'   =>   'Tus pedidos en la puerta de tu curso',
+            'detail'   =>   'Te llevamos tus pedidos a la puerta de tu casa',
+            'fridge_id'   =>   '2',
+            'user_id'   =>   '2'
 
-           User::factory(50)->create([
-            'user_id' => $pointsale->id
-        ]);
-       } */
+        ]); */
     }
 }

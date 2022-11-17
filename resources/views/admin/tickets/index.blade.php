@@ -25,11 +25,14 @@
                 <th>ID</th>
                 <th>Numero</th>
                 <th>Fecha</th>
-                <th>Monto</th>
-                <th>Estado</th>
-                <th>Observaciones</th>
-                <th>Producto</th>
                 <th>USER</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+                <th>Monto</th>
+                <th>Observaciones</th>
+               
+                
 
                 <th colspan="7"></th>
 
@@ -40,20 +43,20 @@
              @foreach ($tickets as $ticket)
                  <tr>
                     <td>{{$ticket->id}}</td>
+                    <td>{{$ticket->number}}</td>
                     <td>{{$ticket->date}}</td>
-                    <td>{{$ticket->mount}}</td>
-                    <td>{{$ticket->status}}</td>
-                    <td>{{$ticket->detail}}</td>
-                    <td>{{$ticket->product}}</td>
                     <td>{{$ticket->user}}</td>
-
-
+                    <td>{{$ticket->product}}</td>
+                    <td>{{$ticket->quantity}}</td>
+                    <td>{{$ticket->status}}</td>
+                    <td>{{$ticket->mount}}</td>
+                    <td>{{$ticket->detail}}</td>
 
                     <td width="10px">
                         <a  class="text-white rounded-lg btn bg-blue-600" href="{{route('admin.tickets.edit', $ticket)}}">Editar</a>
                     </td>
                     <td width="10px">
-                        <form action="{{route('admin.fridges.destroy', $fridge)}}" method="POST">
+                        <form action="{{route('admin.tickets.destroy', $ticket)}}" method="POST">
                                 @csrf
                                 @method('delete')
 

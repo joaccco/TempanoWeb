@@ -13,18 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('productions', function (Blueprint $table) {
+        Schema::create('detail', function (Blueprint $table) {
             $table->id();
-
-            $table->string('date');
-            $table->string('detail');
+            
+            $table->string('quantity');
 
             $table->unsignedBigInteger('product_id');
-            $table->unsignedBigInteger('camera_id');
+            $table->unsignedBigInteger('ticket_id');
+
+            $table->string('subtotal');
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
-            $table->foreign('camera_id')->references('id')->on('cameras')->onDelete('cascade');
-
+            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }
@@ -36,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('productions');
+        Schema::dropIfExists('detail');
     }
 };

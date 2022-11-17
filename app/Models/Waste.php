@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Waste extends Model
 {
     use HasFactory;
+    protected $fillable = ['date', 'detail', 'product_id', 'quantity', 'camera_id'];
 
     public function products(){
-        return $this->belongsTo(Product::class);
+        return $this->hasMany(Product::class);
     }
+    
     public function cameras(){
         return $this->belongsTo(Camera::class);
     }

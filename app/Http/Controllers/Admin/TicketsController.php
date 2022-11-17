@@ -29,7 +29,7 @@ class TicketsController extends Controller
      */
     public function create()
     {
-        $products = Product::all();
+        $products = Product::pluck('name', 'id');
         $users = User::pluck('name', 'id');
 
         return view('admin.tickets.create', compact('products', 'users'));

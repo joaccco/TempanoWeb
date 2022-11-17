@@ -18,11 +18,11 @@ class CategoryFactory extends Factory
     public function definition()
     {
 
-        $name= $this->faker->unique()->word(10);
+       /*  $name= $this->faker->unique()->word(10);
             return [
                 'name' => $name,
                 'slug' => Str::slug($name),
                 'description'=> $this->faker->word(20)
-            ];
+            ]; */
          }
 }

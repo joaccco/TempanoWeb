@@ -26,7 +26,9 @@
                     <th>Nombre</th>
                     <th>Latitud</th>
                     <th>Longitud</th>
-                    <th>Detail</th>
+                    <th>Horarios</th>
+                    <th>Lema</th>
+                    <th>Detalle</th>
                     <th>Heladera</th>
                     <th>Usuario</th>
                     <th colspan="6"></th>
@@ -41,6 +43,8 @@
                         <td>{{$pointsale->name}}</td>
                         <td>{{$pointsale->lat}}</td>
                         <td>{{$pointsale->lng}}</td>
+                        <td>{{$pointsale->schedule}}</td>
+                        <td>{{$pointsale->motto}}</td>
                         <td>{{$pointsale->detail}}</td>
                         <td>{{$pointsale->fridge_id}}</td>
                         <td>{{$pointsale->user_id}}</td>

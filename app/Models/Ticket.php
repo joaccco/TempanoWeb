@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Ticket extends Model
 {
     use HasFactory;
-    protected $fillable = ['number', 'date', 'mount', 'status', 'detail', 'product_id', 'user_id'];
+    protected $fillable = ['number', 'date', 'status', 'detail', 'product_id', 'quantity', 'mount', 'user_id'];
 
     public function products(){
-        return $this->belongsToMany(Product::class);
+        return $this->hasMany(Product::class, 'product_id', 'id');
     }
 
     public function pointsale(){

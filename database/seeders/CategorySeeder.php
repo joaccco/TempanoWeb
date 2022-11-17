@@ -16,6 +16,34 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        //
+        Category::create([
+            'name'  =>  'Hielos',
+            'slug'  =>  'hielos',
+            'description'  =>  'Nuestros productos'
+        ]);
+
+        Category::create([
+            'name'  =>  'Eventos',
+            'slug'  =>  'eventos',
+            'description'  =>  'Cobertura de eventos'
+        ]);
+
+        Category::create([
+            'name'  =>  'Felices Fiestas',
+            'slug'  =>  'felices-fiestas',
+            'description'  =>  'Tempano les desea Muy Felices Fiestas'
+        ]);
+
+        Category::create([
+            'name'  =>  'Produccion',
+            'slug'  =>  'produccion',
+            'description'  =>  'Nuestra Produccion'
+        ]);
+
+        Category::create([
+            'name'  =>  'Heladeras',
+            'slug'  =>  'heladeras',
+            'description'  =>  'Posts de nuestras Heladeras en los distintos Puntos de Venta'
+        ]);
     }
 }

@@ -20,6 +20,9 @@ return new class extends Migration
             $table->string('code');
             $table->string('price');
             $table->string('detail');
+            $table->integer('stock');
+            $table->integer('alert');
+
 
             $table->timestamps();
         });

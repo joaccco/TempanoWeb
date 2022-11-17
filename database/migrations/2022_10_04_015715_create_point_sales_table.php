@@ -19,7 +19,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('lat');
             $table->string('lng');
-            
+
+            $table->string('schedule');
+            $table->string('motto');
             $table->string('detail');
             
             $table->unsignedBigInteger('fridge_id');

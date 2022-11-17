@@ -40,15 +40,16 @@
               @enderror
             </div>
 
+
+            {{-- Productos y su respectiva cantidad --}}
             <div class="form-group">
               <p class="font-weight-bold mb-1">Producto:</p>
               @foreach ($products as $product)
-
-              <label class="mr-4">
-                 {!! Form::checkbox('products[]', $product->id, null) !!}
+                 {!! Form::label('product_id', 'Producto') !!}
+                 {!! Form::select('product_id', $product->id, null) !!}
                  {{ $product->name }}
-              </label>
-              <input type="text" id="cantidad">
+          
+              <input type="text" id="quantity">
 
               @endforeach
 
@@ -104,9 +105,6 @@
 @stop
 
 @section('js')
-     {{-- CKEditor --}}
-    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
-
     {{-- Plugin para asignar automaticamente una Slug a cada categoria --}}
     <script src="{{asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js')}}">
     </script>
@@ -120,17 +118,5 @@
             space: '-'
            });
         });
-
-         ClassicEditor
-          .create( document.querySelector( '#editor' ) )
-          .catch( error => {
-            console.error( error );
-        } );
-
-        ClassicEditor
-          .create( document.querySelector( '#body' ) )
-          .catch( error => {
-            console.error( error );
-        } );
     </script>
 @endsection

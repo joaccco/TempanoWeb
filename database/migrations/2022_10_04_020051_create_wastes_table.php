@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
 
             $table->string('date');
-            $table->string('quantity');
             $table->string('detail');
 
             $table->unsignedBigInteger('product_id');

@@ -41,8 +41,25 @@
                 @enderror
             </div>
 
-            <p class="font-weight-bold mb-1">Informacion relevante:</p>
-            <div id="editor" class="form-group">
+            <div class="form-group">
+                {!! Form::label('schedule', 'Horarios') !!}
+                {!! Form::text('schedule', NULL, ['class' => 'form-control', 'placeholder' => 'Horarios']) !!}
+
+                @error('schedule')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('motto', 'Lema') !!}
+                {!! Form::text('motto', NULL, ['class' => 'form-control', 'placeholder' => 'Lema']) !!}
+
+                @error('motto')
+                    <span class="text-danger">{{$message}}</span>
+                @enderror
+            </div>
+
+            <div class="form-group">
                 {!! Form::label('detail', 'Descripcion del Punto') !!}
                 {!! Form::text('detail', NULL, ['class' => 'form-control', 'placeholder' => 'Ingresar una descripcion']) !!}
 
@@ -69,8 +86,6 @@
                 @enderror
             </div>
 
-            <iframe width='100%' height='730px' src="https://api.mapbox.com/styles/v1/joacco/cl9qlbl52007x15khmdhgscp1.html?title=false&access_token=pk.eyJ1Ijoiam9hY2NvIiwiYSI6ImNsOXFldWlyYzA1cGQ0MHFtd2tib2xycGQifQ.w6tQzCYY0lIO0b6_v1wxGA&zoomwheel=false#11/48.138/11.575" title="Navigation" style="border:none;"></iframe>
-
             {!! Form::submit('Almacenar Punto de venta', ['class' => 'btn btn-primary']) !!}
         </div>
     </div>
@@ -78,7 +93,7 @@
 
 @section('js')
     {{-- CKEditor --}}
-    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script> --}}
 
     {{-- Plugin para asignar automaticamente una Slug a cada categoria --}}
     <script src="{{asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js')}}">
@@ -94,10 +109,10 @@
            });
         });
 
-         ClassicEditor
+        /*  ClassicEditor
           .create( document.querySelector( '#editor' ) )
           .catch( error => {
             console.error( error );
-        } );
+        } ); */
     </script>
 @endsection

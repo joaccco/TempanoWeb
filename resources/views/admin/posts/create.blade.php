@@ -80,21 +80,25 @@
             <div class="form-group">
               {!! Form::label('extract') !!}
               {!! Form::textarea('extract', null, ['class' => 'form-control']) !!}
-            </div>
 
-            @error('extract')
+              @error('extract')
               <small class="text-danger">{{$message}}</small>
             @enderror
+            </div>
+
+            
 
             <p class="font-weight-bold mt-4">Body:</p>
             <div class="mt-4 form-group">
               {!! Form::label('body') !!}
               {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
-            </div>
 
-            @error('body')
+              @error('body')
             <small class="text-danger">{{$message}}</small>
             @enderror
+            </div>
+
+            
 
              {!! Form::submit('Crear Post', ['class' => 'mt-4 text-white btn bg-blue-600'])!!}
              {!! Form::close() !!}
@@ -108,7 +112,7 @@
 
 @section('js')
      {{-- CKEditor --}}
-    <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script>
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/35.2.1/classic/ckeditor.js"></script> --}}
 
     {{-- Plugin para asignar automaticamente una Slug a cada categoria --}}
     <script src="{{asset('vendor/jQuery-Plugin-stringToSlug-1.3/jquery.stringToSlug.min.js')}}">
@@ -124,7 +128,7 @@
            });
         });
 
-         ClassicEditor
+        /*  ClassicEditor
           .create( document.querySelector( '#editor' ) )
           .catch( error => {
             console.error( error );
@@ -134,6 +138,6 @@
           .create( document.querySelector( '#body' ) )
           .catch( error => {
             console.error( error );
-        } );
+        } ); */
     </script>
 @endsection

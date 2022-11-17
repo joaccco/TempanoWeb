@@ -18,14 +18,11 @@ return new class extends Migration
 
             $table->string('number');
             $table->string('date');
-            $table->string('mount');
             $table->boolean('status')->default(1);
             $table->string('detail');
+            $table->string('mount');
 
-            $table->unsignedBigInteger('product_id');
             $table->unsignedBigInteger('user_id');
-
-            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
